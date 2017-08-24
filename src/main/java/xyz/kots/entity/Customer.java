@@ -1,5 +1,7 @@
 package xyz.kots.entity;
 
+import io.swagger.annotations.ApiModelProperty;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -9,12 +11,16 @@ public class Customer {
 
     @Id
     @GeneratedValue
+    @ApiModelProperty(notes = "The database generated customer ID")
     private long id;
 
+    @ApiModelProperty(notes = "The customer description")
     private String name;
 
+    @ApiModelProperty(notes = "The customer phone")
     private String phone;
 
+    @ApiModelProperty(notes = "The customer address")
     private String address;
 
     public long getId() {
