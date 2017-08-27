@@ -14,7 +14,7 @@ public class Customer {
     @ApiModelProperty(notes = "The database generated customer ID")
     private long id;
 
-    @ApiModelProperty(notes = "The customer description")
+    @ApiModelProperty(notes = "The customer name")
     private String name;
 
     @ApiModelProperty(notes = "The customer phone")

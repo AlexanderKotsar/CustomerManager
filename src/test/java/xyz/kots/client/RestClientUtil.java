@@ -1,6 +1,5 @@
 package xyz.kots.client;
 
-import org.junit.Test;
 import org.springframework.http.*;
 import org.springframework.web.client.RestTemplate;
 import xyz.kots.entity.Customer;
@@ -9,7 +8,6 @@ import java.net.URI;
 
 public class RestClientUtil {
 
-    @Test
     public void getCustomerByIdDemo() {
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
@@ -22,7 +20,6 @@ public class RestClientUtil {
                 +", Phone:"+customer.getPhone()+", Address:"+customer.getAddress());
     }
 
-    @Test
     public void getCustomerByNameDemo() {
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
@@ -37,7 +34,6 @@ public class RestClientUtil {
         }
     }
 
-    @Test
     public void getAllCustomersDemo() {
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
@@ -52,7 +48,6 @@ public class RestClientUtil {
         }
     }
 
-    @Test
     public void addCustomerDemo() {
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
@@ -67,7 +62,6 @@ public class RestClientUtil {
         System.out.println(uri.getPath());
     }
 
-    @Test
     public void updateCustomerDemo() {
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
@@ -82,7 +76,6 @@ public class RestClientUtil {
         restTemplate.put(url, requestEntity);
     }
 
-    @Test
     public static void main(String args[]) {
         RestClientUtil util = new RestClientUtil();
         util.getCustomerByIdDemo();

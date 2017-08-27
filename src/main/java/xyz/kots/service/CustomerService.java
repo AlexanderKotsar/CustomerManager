@@ -1,17 +1,16 @@
 package xyz.kots.service;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import xyz.kots.dao.ICustomerDAO;
 import xyz.kots.entity.Customer;
 
+import java.util.List;
+
 @Service
 public class CustomerService implements ICustomerService {
 	@Autowired
 	private ICustomerDAO customerDAO;
-
 
 	@Override
 	public List<Customer> getAllCustomers(){

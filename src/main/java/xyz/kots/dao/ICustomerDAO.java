@@ -1,6 +1,6 @@
 package xyz.kots.dao;
-import xyz.kots.entity.Customer;
 
+import xyz.kots.entity.Customer;
 import java.util.List;
 
 public interface ICustomerDAO {
